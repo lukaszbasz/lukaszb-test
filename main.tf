@@ -6,6 +6,10 @@ terraform {
       source  = "hashicorp/random"
       version = "~> 3.6"
     }
+    null = {
+      source  = "hashicorp/null"
+      version = "~> 3.2"
+    }
   }
 }
 
@@ -28,4 +32,10 @@ resource "random_pet" "cluster" {
   length    = 2
   separator = "-"
   prefix    = "node"
+}
+
+resource "null_resource" "boom" {
+  provisioner "local-exec" {
+    command = "exit 1"
+  }
 }
