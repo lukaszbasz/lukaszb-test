@@ -1,3 +1,3 @@
 resource "terraform_data" "marker" {
-  input = "stack-a v2"
+  input = "stack-a v3"
 }
