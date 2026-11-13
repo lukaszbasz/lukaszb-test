@@ -34,8 +34,3 @@ resource "random_pet" "cluster" {
   prefix    = "node"
 }
 
-resource "null_resource" "boom" {
-  provisioner "local-exec" {
-    command = "exit 1"
-  }
-}
